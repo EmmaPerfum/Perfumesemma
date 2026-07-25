@@ -1,172 +1,203 @@
-# Perfumesemma
 index.html
-<h1>Hola</h1>
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emmañuel Perfumes</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emmañuel Perfumes</title>
 
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family:Arial, Helvetica, sans-serif;
-        }
+<link rel="stylesheet" href="style.css">
 
-        body{
-            background:#111;
-            color:white;
-        }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-        header{
-            background:#000;
-            text-align:center;
-            padding:30px;
-        }
-
-        header img{
-            width:180px;
-            border-radius:15px;
-        }
-
-        h1{
-            margin-top:15px;
-            font-size:35px;
-        }
-
-        .buscador{
-            display:flex;
-            justify-content:center;
-            margin:30px;
-        }
-
-        input{
-            width:90%;
-            max-width:500px;
-            padding:15px;
-            border:none;
-            border-radius:10px;
-            font-size:18px;
-        }
-
-        .catalogo{
-            display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-            gap:25px;
-            padding:30px;
-        }
-
-        .card{
-            background:#1b1b1b;
-            border-radius:15px;
-            overflow:hidden;
-            text-align:center;
-            transition:.3s;
-        }
-
-        .card:hover{
-            transform:scale(1.03);
-        }
-
-        .card img{
-            width:100%;
-            height:300px;
-            object-fit:cover;
-        }
-
-        .card h2{
-            margin:15px;
-        }
-
-        .precio{
-            font-size:24px;
-            color:#00ff95;
-            margin-bottom:10px;
-        }
-
-        button{
-            margin:15px;
-            padding:12px 25px;
-            border:none;
-            border-radius:10px;
-            background:white;
-            color:black;
-            cursor:pointer;
-            font-size:16px;
-        }
-
-        .agotado{
-            background:#555;
-            color:white;
-        }
-
-        footer{
-            text-align:center;
-            padding:30px;
-            background:#000;
-            margin-top:30px;
-        }
-    </style>
 </head>
 
 <body>
 
 <header>
 
+<div class="logo">
 <h1>Emmañuel Perfumes</h1>
-<p>Perfumes originales al mejor precio.</p>
+<p>Perfumes originales • Compra por WhatsApp</p>
+</div>
 
 </header>
 
-<div class="buscador">
-<input type="text" id="buscar" placeholder="Buscar perfume...">
-</div>
+<section class="hero">
 
-<div class="catalogo" id="catalogo">
+<h2>Encuentra tu próximo perfume</h2>
 
-</div>
+<p>Originales • Excelente calidad • Entrega en punto acordado</p>
+
+<input type="text" id="buscador" placeholder="Buscar perfume...">
+
+</section>
+
+<section id="catalogo" class="catalogo">
+
+</section>
 
 <footer>
 
-Entrega en punto acordado por WhatsApp.
+<p>📍 Entrega en punto acordado.</p>
+
+<p>© Emmañuel Perfumes</p>
 
 </footer>
 
-<script>
+<script src="script.js"></script>
 
+</body>
+</html>
+style.css
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#0f0f0f;
+color:white;
+}
+
+header{
+background:#000;
+padding:25px;
+text-align:center;
+border-bottom:1px solid #333;
+}
+
+.logo h1{
+font-size:2rem;
+}
+
+.logo p{
+color:#bdbdbd;
+margin-top:8px;
+}
+
+.hero{
+padding:50px 20px;
+text-align:center;
+}
+
+.hero h2{
+font-size:2.3rem;
+margin-bottom:10px;
+}
+
+.hero p{
+color:#bfbfbf;
+margin-bottom:25px;
+}
+
+#buscador{
+width:90%;
+max-width:500px;
+padding:15px;
+border:none;
+border-radius:12px;
+font-size:16px;
+outline:none;
+}
+
+.catalogo{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+gap:25px;
+padding:40px 20px;
+}
+
+.card{
+background:#1b1b1b;
+border-radius:18px;
+overflow:hidden;
+transition:.3s;
+box-shadow:0 10px 25px rgba(0,0,0,.35);
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card img{
+width:100%;
+height:320px;
+object-fit:cover;
+}
+
+.info{
+padding:20px;
+}
+
+.info h3{
+margin-bottom:10px;
+}
+
+.precio{
+font-size:22px;
+font-weight:700;
+margin-bottom:15px;
+}
+
+button{
+width:100%;
+padding:14px;
+background:white;
+color:black;
+border:none;
+border-radius:10px;
+font-weight:600;
+cursor:pointer;
+}
+
+button:hover{
+background:#d9d9d9;
+}
+
+.agotado{
+background:#555;
+color:white;
+cursor:not-allowed;
+}
+
+footer{
+background:#000;
+text-align:center;
+padding:30px;
+color:#bdbdbd;
+margin-top:30px;
+}
+script.js
 const perfumes = [
-
 {
 nombre:"Cherry Baby Sabrina",
-precio:"800 MXN",
-imagen:"https://images.unsplash.com/photo-1541643600914-78b084683601?w=800",
-link:"https://wa.me/526695056778?text=Hola,%20me%20interesa%20el%20Cherry%20Baby%20Sabrina."
+precio:"$800 MXN",
+imagen:"https://images.openai.com/thumbnails/url/cherry-baby-sabrina.jpg",
+whatsapp:"Cherry Baby Sabrina"
 },
-
 {
 nombre:"9PM Night Out",
-precio:"1200 MXN",
-imagen:"https://images.unsplash.com/photo-1594035910387-fea47794261f?w=800",
-link:"https://wa.me/526695056778?text=Hola,%20me%20interesa%20el%209PM%20Night%20Out."
+precio:"$1200 MXN",
+imagen:"https://images.openai.com/thumbnails/url/9pm-night-out.jpg",
+whatsapp:"9PM Night Out"
 },
-
 {
 nombre:"Set Lattafa Khamrah",
-precio:"850 MXN",
-imagen:"https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=800",
-link:"https://wa.me/526695056778?text=Hola,%20me%20interesa%20el%20Set%20Lattafa%20Khamrah."
+precio:"$850 MXN",
+imagen:"https://images.openai.com/thumbnails/url/lattafa-khamrah-set.jpg",
+whatsapp:"Set Lattafa Khamrah"
 },
-
 {
 nombre:"Odyssey Mandarin Sky",
 precio:"AGOTADO",
-imagen:"https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=800",
+imagen:"https://images.openai.com/thumbnails/url/odyssey-mandarin-sky.jpg",
 agotado:true
 }
-
 ];
 
 const catalogo=document.getElementById("catalogo");
@@ -180,34 +211,10 @@ lista.forEach(p=>{
 catalogo.innerHTML+=`
 <div class="card">
 
-<img src="${p.imagen}">
+<img src="${p.imagen}" alt="${p.nombre}">
 
-<h2>${p.nombre}</h2>
+<div class="info">
 
-<div class="precio">${p.precio}</div>
+<h3>${p.nombre}</h3>
 
-${p.agotado
-?'<button class="agotado">AGOTADO</button>'
-:`<button onclick="window.open('${p.link}')">Comprar por WhatsApp</button>`}
-
-</div>
-`;
-
-});
-
-}
-
-mostrar(perfumes);
-
-document.getElementById("buscar").addEventListener("input",e=>{
-
-const texto=e.target.value.toLowerCase();
-
-mostrar(perfumes.filter(p=>p.nombre.toLowerCase().includes(texto)));
-
-});
-
-</script>
-
-</body>
-</html>
+<div class="precio
